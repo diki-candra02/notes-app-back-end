@@ -16,8 +16,8 @@ const addNoteHandler = (request, h) => {
     const isSuccess = notes.filter((note) => note.id === id).length > 0;
     if(isSuccess){
         const response = h.response({
-            status: 'Success',
-            meesage: 'Catatan berhasil ditambahkan',
+            status: 'success',
+            message: 'Catatan berhasil ditambahkan',
             data: {
                 noteId: id,
             }
@@ -35,7 +35,7 @@ const addNoteHandler = (request, h) => {
 }
 
 const getNoteHandler = () => ({
-    status: 'Success',
+    status: 'success',
     data: {
         notes,
     },
@@ -47,7 +47,7 @@ const getNoteByIdHandler = (request, h) => {
     
     if(note !== undefined){
         return {
-            status: 'Success',
+            status: 'success',
             data: {
                 note
             }
